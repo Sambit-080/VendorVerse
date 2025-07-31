@@ -15,7 +15,7 @@ You can easily build and run this application as a Docker container.
 Navigate to the root directory of the project in your terminal and run the following command. This will build the Docker image and tag it as `vendorverse`.
 
 ```sh
-docker build -t VendorVerse .
+docker build -t vendorverse .
 ```
 
 ### 2. Run the Docker Container
@@ -23,18 +23,11 @@ docker build -t VendorVerse .
 After the image has been successfully built, run the following command to start the application in a container. This will map port 3000 on your local machine to port 3000 inside the container.
 
 ```sh
-docker run -p 3000:3000 VendorVerse
+docker run -d -p 9001:3000 vendorverse
 ```
 
-The application will now be running and accessible at http://localhost:3000.
+The application will now be running and accessible at http://localhost:9001.
 
-## Available Routes
-
-The application has the following routes available:
-
-*   `GET /`: The home page.
-*   `GET /dashboard`: The application dashboard.
-*   `GET /users`: A sample route for user information.
 
 ## Project Structure
 
